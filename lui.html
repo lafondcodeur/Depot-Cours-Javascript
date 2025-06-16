@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Beautiful Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        padding: 40px 0 20px 0;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 3rem;
+        margin: 0;
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+      header p {
+        font-size: 1.3rem;
+        margin: 15px 0 0 0;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      .cta {
+        margin: 40px auto 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .cta a {
+        text-decoration: none;
+        background: #fff;
+        color: #764ba2;
+        padding: 15px 40px;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        transition: background 0.2s, color 0.2s;
+      }
+      .cta a:hover {
+        background: #764ba2;
+        color: #fff;
+      }
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 60px 0 0 0;
+        gap: 30px;
+      }
+      .feature {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 30px 24px;
+        width: 280px;
+        text-align: center;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+      }
+      .feature h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+      .feature p {
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.85;
+      }
+      footer {
+        margin-top: auto;
+        text-align: center;
+        padding: 30px 0 15px 0;
+        font-size: 1rem;
+        opacity: 0.7;
+      }
+      @media (max-width: 900px) {
+        .features {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Your Next Project</h1>
+      <p>
+        Build, launch, and grow with a stunning landing page that inspires
+        action.
+      </p>
+      <div class="cta">
+        <a href="#">Get Started</a>
+        <a href="#">Learn More</a>
+      </div>
+    </header>
+    <section class="features">
+      <div class="feature">
+        <h3>Modern Design</h3>
+        <p>
+          Clean, responsive, and visually appealing layouts for all devices.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Easy Customization</h3>
+        <p>Effortlessly adapt the page to fit your brand and message.</p>
+      </div>
+      <div class="feature">
+        <h3>Lightning Fast</h3>
+        <p>Optimized for speed to keep your visitors engaged.</p>
+      </div>
+    </section>
+    <footer>&copy; 2024 Your Brand. All rights reserved.</footer>
+  </body>
+</html>

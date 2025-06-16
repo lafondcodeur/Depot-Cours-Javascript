@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Developer Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #4f8cff;
+        --bg: #f7f9fb;
+        --text: #222;
+        --accent: #ffb347;
+      }
+      body {
+        margin: 0;
+        font-family: "Montserrat", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+      header {
+        background: var(--primary);
+        color: #fff;
+        padding: 2rem 0 1.5rem 0;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      header img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        margin-bottom: 1rem;
+        object-fit: cover;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      }
+      header h1 {
+        margin: 0.2em 0 0.1em 0;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+      }
+      header p {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      nav {
+        margin-top: 1.5rem;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1.2rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: var(--accent);
+      }
+      main {
+        max-width: 900px;
+        margin: 2.5rem auto;
+        padding: 0 1.5rem;
+      }
+      section {
+        margin-bottom: 3rem;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        padding: 2rem;
+      }
+      h2 {
+        color: var(--primary);
+        margin-top: 0;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .skill {
+        background: var(--bg);
+        color: var(--primary);
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+      }
+      .project {
+        background: var(--bg);
+        border-radius: 10px;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        padding: 1.2rem;
+        transition: transform 0.15s;
+      }
+      .project:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 4px 16px rgba(79, 140, 255, 0.08);
+      }
+      .project h3 {
+        margin-top: 0;
+        color: var(--primary);
+        font-size: 1.2rem;
+      }
+      .project p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      .project a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.98rem;
+      }
+      .contact {
+        text-align: center;
+      }
+      .contact a {
+        display: inline-block;
+        margin: 0 0.7rem;
+        color: var(--primary);
+        font-size: 1.5rem;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+      .contact a:hover {
+        color: var(--accent);
+      }
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 2rem;
+        }
+        main {
+          padding: 0 0.5rem;
+        }
+        section {
+          padding: 1rem;
+        }
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/7e5b6c8b7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <img src="https://i.pravatar.cc/300?img=13" alt="Profile Photo" />
+      <h1>MACK LAFOND</h1>
+      <p>Full Stack Developer | JavaScript Enthusiast | Problem Solver</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hi! I'm a passionate developer with experience in building web
+          applications using modern technologies. I love solving complex
+          problems and creating beautiful, performant user experiences. Let's
+          build something amazing together!
+        </p>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+          <span class="skill">JavaScript</span>
+          <span class="skill">HTML5</span>
+          <span class="skill">CSS3</span>
+          <span class="skill">React</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">TypeScript</span>
+          <span class="skill">Git</span>
+          <span class="skill">REST APIs</span>
+          <span class="skill">MongoDB</span>
+          <span class="skill">Sass</span>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>
+              A personal portfolio website to showcase my projects and skills.
+              Built with HTML, CSS, and JavaScript.
+            </p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+          <div class="project">
+            <h3>Task Manager App</h3>
+            <p>
+              A full-featured task manager with user authentication and
+              real-time updates. Built with React and Node.js.
+            </p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+          <div class="project">
+            <h3>Weather Dashboard</h3>
+            <p>
+              A responsive web app that displays weather data using a public
+              API. Built with JavaScript and Bootstrap.
+            </p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact">
+          <a href="mailto:your.email@example.com" title="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            title="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            title="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            title="Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
