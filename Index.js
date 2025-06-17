@@ -270,7 +270,6 @@ saluer("D-CLIC");
 saluer("MACK LAFOND");
 saluer("D-CLIC");
 
-
 function saluer2(nom, prenom) {
   console.log("Bonjour " + nom + " " + prenom + " !");
 }
@@ -320,6 +319,60 @@ function verifierAge(age) {
 let ageUtilisateur = 20;
 console.log(verifierAge(ageUtilisateur)); // "Accès autorisé"
 
+let notes = [];
+let mesFruits = ["pomme", "banane", "orange"]; // Un tableau de fruits
+let mesNombres = [10, 20, 30, 40]; // Un tableau de nombres
+let chosesMelangees = ["texte", 123, true, null]; // Un tableau avec différents types de choses !
+
+console.log(mesNombres.length);
+console.log(mesNombres[3]);
+console.log(mesNombres[mesNombres.length - 1]);
+
+mesFruits[1] = "kiwi"; // Modification de l'élément à l'index 1
+console.log(mesFruits);
+
+console.log(mesFruits); // Affiche : ["pomme", "banane", "orange"]
+console.log(mesNombres); // Affiche : [10, 20, 30, 40]
+console.log(chosesMelangees); // Affiche : ["texte", 123, true, null]
+
+let maListeDeCourses = ["lait", "pain"];
+console.log(maListeDeCourses);
+maListeDeCourses.push("œufs"); // Ajoute "œufs" à la fin du tableau
+console.log(maListeDeCourses);
+
+maListeDeCourses.push("beurre", "fromage");
+console.log(maListeDeCourses);
+
+// Supprime le dernier élément du tableau
+let elemenSupprimer = maListeDeCourses.pop();
+console.log(maListeDeCourses);
+
+console.log(elemenSupprimer);
+
+maListeDeCourses.unshift("fruits"); // Ajoute "fruits" au début du tableau
+console.log(maListeDeCourses);
+
+// Supprime le premier élément du tableau
+let premierElementSupprimer = maListeDeCourses.shift();
+console.log(maListeDeCourses);
+console.log(premierElementSupprimer);
+
+//Parcourir un tableau avec la boucle for
+for (let i = 0; i < maListeDeCourses.length; i++) {
+  console.log("mon élément " + (i + 1) + " est: " + maListeDeCourses[i]);
+}
+
+// Boucle for...of
+for (let liste of maListeDeCourses) {
+  console.log("Voici un élément : " + liste);
+}
+
+
+console.log(maListeDeCourses);
+console.log(maListeDeCourses.includes("Pain"));
+
+
+
 function calculerMoyenne(notes) {
   let somme = 0;
   for (let i = 0; i < notes.length; i++) {
@@ -327,6 +380,7 @@ function calculerMoyenne(notes) {
   }
   return somme / notes.length;
 }
+console.log(calculerMoyenne(notes));
 
 //tableau
 let notesEleve = [12, 15, 14, 10, 18, 45.6, "MACK"];
