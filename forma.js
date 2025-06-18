@@ -120,7 +120,7 @@ console.log(maListeDeCourses);
 let dernierElement = maListeDeCourses.pop(); // Supprime "œufs"
 console.log(maListeDeCourses);
 
-console.log("Dernier élément supprimé :", dernierElement);
+console.log(dernierElement);
 
 // Ajouter un élément au début du tableau avec la méthode `unshift()`
 maListeDeCourses.unshift("beurre", "Camembert"); // Ajoute "beurre" et "Camembert" au début du tableau
@@ -164,7 +164,20 @@ let nomEtudiants = [
 ];
 
 console.log(nomEtudiants.length);
-
+// Parcourir le tableau avec une boucle `for`
 for (let i = 0; i < nomEtudiants.length; i++) {
   console.log("Étudiant " + (i + 1) + ": " + nomEtudiants[i]);
 }
+
+//Parcourir un tableau avec une boucle `for...of`
+for (let etudiant of nomEtudiants) {
+  console.log("Étudiant: " + etudiant);
+}
+
+// Vérifier si un élément existe dans le tableau avec la méthode `includes()`
+console.log(nomEtudiants.includes("Eve"));
+console.log(nomEtudiants.includes("MACK"));
+
+//indexOf() : À quel numéro de compartiment se trouve ce jouet ?
+console.log(nomEtudiants.indexOf("Eve"));
+console.log(nomEtudiants.indexOf("MACK")); // Retourne -1 car "MACK" n'est pas dans le tableau
