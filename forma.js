@@ -163,6 +163,10 @@ let nomEtudiants = [
   "Zoe",
 ];
 
+console.log(nomEtudiants.indexOf("Peggy"));
+nomEtudiants.splice(15, 1);
+console.log(nomEtudiants);
+
 console.log(nomEtudiants.length);
 // Parcourir le tableau avec une boucle `for`
 for (let i = 0; i < nomEtudiants.length; i++) {
@@ -181,3 +185,45 @@ console.log(nomEtudiants.includes("MACK"));
 //indexOf() : À quel numéro de compartiment se trouve ce jouet ?
 console.log(nomEtudiants.indexOf("Eve"));
 console.log(nomEtudiants.indexOf("MACK")); // Retourne -1 car "MACK" n'est pas dans le tableau
+
+// Découper un tableau en sous-tableaux avec la méthode `slice()`
+// La méthode `slice()` retourne une copie superficielle d'une portion du tableau dans un nouveau tableau, sans modifier le tableau d'origine.
+// Elle prend deux arguments : l'index de début (inclusif) et l'index de fin (exclusif).
+// Si l'index de fin n'est pas spécifié, elle retourne tous les éléments à partir de l'index de début jusqu'à la fin du tableau.
+// Exemple :
+let nombres = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let sousTableau = nombres.slice(1, 6); // Prend les éléments de l'index 1 (inclus) jusqu'à l'index 4 (exclus)
+
+// Affiche : [2, 3, 4, 5, 6] (les éléments aux index 1, 2, 3,4,5)
+console.log(sousTableau);
+
+let duDebutAuTrois = nombres.slice(0, 3); // De l'index 0 (inclus) à l'index 3 (exclus)
+console.log(duDebutAuTrois);
+
+let duTroisALaFin = nombres.slice(3); // De l'index 3 (inclus) jusqu'à la fin
+console.log(duTroisALaFin); // Affiche : [4, 5]
+
+console.log(nombres); // Le tableau original n'a pas changé : [1, 2, 3, 4, 5]
+
+// Splice() : Modifier un tableau en place
+// La méthode `splice()` modifie le tableau d'origine en ajoutant ou en supprimant des éléments.
+// Elle prend trois arguments : l'index de début, le nombre d'éléments à supprimer et les éléments à ajouter.
+// Exemple :
+let couleurs = ["rouge", "vert", "bleu", "jaune", "noir", "marron", "blanc"];
+
+// Supprimer des éléments
+// Supprimer 2 éléments à partir de l'index 1
+let elementsSupprimes = couleurs.splice(1, 3);
+console.log(couleurs);
+console.log(elementsSupprimes); // Affiche : ["vert", "bleu"] (ceux qui ont été supprimés)
+
+// Ajouter des éléments (sans en supprimer)
+couleurs = ["rouge", "vert", "bleu"];
+couleurs.splice(1, 0, "orange", "blanc"); // À partir de l'index 1, supprimer 0 élément, ajouter "orange" et "blanc"
+console.log(couleurs);
+
+// Remplacer des éléments
+couleurs = ["rouge", "vert", "bleu"];
+couleurs.splice(1, 1, "jaune"); // À partir de l'index 1, supprimer 1 élément ("vert"), ajouter "jaune"
+console.log(couleurs);
