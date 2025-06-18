@@ -163,8 +163,13 @@ let nomEtudiants = [
   "Zoe",
 ];
 
-console.log(nomEtudiants.indexOf("Peggy"));
-nomEtudiants.splice(15, 1);
+console.log(nomEtudiants.indexOf("Xena"));
+// nomEtudiants[23]="Rema";
+nomEtudiants.splice(23, 0, "MACK");
+console.log(nomEtudiants);
+
+console.log(nomEtudiants.indexOf("Uma"));
+nomEtudiants.splice(20, 1);
 console.log(nomEtudiants);
 
 console.log(nomEtudiants.length);
@@ -174,17 +179,22 @@ for (let i = 0; i < nomEtudiants.length; i++) {
 }
 
 //Parcourir un tableau avec une boucle `for...of`
-for (let etudiant of nomEtudiants) {
-  console.log("Étudiant: " + etudiant);
+for (let etu of nomEtudiants) {
+  console.log("Étudiant: " + etu);
 }
 
 // Vérifier si un élément existe dans le tableau avec la méthode `includes()`
-console.log(nomEtudiants.includes("Eve"));
+nomEtudiants;
+console.log(nomEtudiants.includes("Nina"));
 console.log(nomEtudiants.includes("MACK"));
 
 //indexOf() : À quel numéro de compartiment se trouve ce jouet ?
-console.log(nomEtudiants.indexOf("Eve"));
+nomEtudiants;
+console.log(nomEtudiants.indexOf("Uma"));
 console.log(nomEtudiants.indexOf("MACK")); // Retourne -1 car "MACK" n'est pas dans le tableau
+
+nomEtudiants[19] = "MACK"; // Ajoute "MACK"
+nomEtudiants;
 
 // Découper un tableau en sous-tableaux avec la méthode `slice()`
 // La méthode `slice()` retourne une copie superficielle d'une portion du tableau dans un nouveau tableau, sans modifier le tableau d'origine.
@@ -213,10 +223,10 @@ console.log(nombres); // Le tableau original n'a pas changé : [1, 2, 3, 4, 5]
 let couleurs = ["rouge", "vert", "bleu", "jaune", "noir", "marron", "blanc"];
 
 // Supprimer des éléments
-// Supprimer 2 éléments à partir de l'index 1
-let elementsSupprimes = couleurs.splice(1, 3);
+// Supprimer 2 éléments à partir de l'index 2
+let elementsSupprimes = couleurs.splice(2, 1);
 console.log(couleurs);
-console.log(elementsSupprimes); // Affiche : ["vert", "bleu"] (ceux qui ont été supprimés)
+console.log(elementsSupprimes); // Affiche : ["bleu"] (ceux qui a été supprimés)
 
 // Ajouter des éléments (sans en supprimer)
 couleurs = ["rouge", "vert", "bleu"];
