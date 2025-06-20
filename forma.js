@@ -223,10 +223,10 @@ console.log(nombres); // Le tableau original n'a pas changé : [1, 2, 3, 4, 5]
 let couleurs = ["rouge", "vert", "bleu", "jaune", "noir", "marron", "blanc"];
 
 // Supprimer des éléments
-// Supprimer 2 éléments à partir de l'index 2
-let elementsSupprimes = couleurs.splice(2, 1);
+// Supprimer 3 éléments à partir de l'index 0
+couleurs.splice(0, 3);
 console.log(couleurs);
-console.log(elementsSupprimes); // Affiche : ["bleu"] (ceux qui a été supprimés)
+// console.log(elementsSupprimes);
 
 // Ajouter des éléments (sans en supprimer)
 couleurs = ["rouge", "vert", "bleu"];
@@ -237,3 +237,131 @@ console.log(couleurs);
 couleurs = ["rouge", "vert", "bleu"];
 couleurs.splice(1, 1, "jaune"); // À partir de l'index 1, supprimer 1 élément ("vert"), ajouter "jaune"
 console.log(couleurs);
+
+let appareilElectromenager = [
+  "Réfrigérateur",
+  "Lave-linge",
+  "Sèche-linge",
+  "Lave-vaisselle",
+  "Cuisinière",
+  "Micro-ondes",
+  "Grille-pain",
+  "Mixeur",
+  "Bouilloire",
+  "Aspirateur",
+];
+
+console.log(appareilElectromenager.indexOf("Mixeur"));
+appareilElectromenager[7] = "Robot culinaire";
+console.log(appareilElectromenager);
+
+// Map
+let nombre1 = [1, 2, 3, 4, 5];
+
+// On veut créer un nouveau tableau où chaque nombre est multiplié par 2
+let nombresMultiplies = nombre1.map(function (n) {
+  return n / 2;
+});
+
+nombresMultiplies;
+
+appareilElectromenager;
+let appreilPlus = appareilElectromenager.map(function (appareil) {
+  return appareil + " CONGO MARQUE";
+});
+
+appreilPlus;
+
+nombresMultiplies;
+console.log(nombre1); // Affiche : [1, 2, 3, 4, 5] (le tableau original n'a pas changé !)
+
+let seElectromenager = appareilElectromenager.map(function (appareil) {
+  return appareil.toUpperCase();
+});
+
+seElectromenager;
+
+appareilElectromenager;
+
+//Filter
+let marqueOrdinateur = [
+  "Dell",
+  "HP",
+  "Apple",
+  "Dell",
+  "Lenovo",
+  "Asus",
+  "Dell",
+  "Acer",
+  "Microsoft",
+  "HP",
+  "Acer",
+];
+
+let ordinateursDell = marqueOrdinateur.filter(function (marque) {
+  return marque === "Dell";
+});
+ordinateursDell;
+
+// On peut aussi utiliser une fonction EXPRESSION
+let ordinateursHp = marqueOrdinateur.filter(function (marque) {
+  return marque === "HP";
+});
+ordinateursHp;
+
+// AUssi, on peut utiliser une fonction fléchée
+ordinateursHp = marqueOrdinateur.filter((marque) => marque === "HP");
+console.log(ordinateursHp);
+
+ordinateursHp;
+
+let nameForMe = "MACK LAFOND";
+console.log(nameForMe.length);
+console.log(nameForMe.toUpperCase());
+console.log(nameForMe.toLowerCase());
+
+//Find un ordinateur Dell
+let ordinateurDell = marqueOrdinateur.find((marque) => marque === "Microsoft");
+ordinateurDell;
+
+let salaire = [200000, 150000, 300000, 250000, 480000];
+salaire.sort();
+salaire;
+
+let salaireSuperieurA300000 = salaire.find(function (salaire) {
+  return salaire > 300000;
+});
+
+salaireSuperieurA300000;
+
+// LES OBJECTS EN JAVASCRIPT
+// Un objet est une collection de paires clé-valeur
+// Un objet en JavaScript est une façon de regrouper des informations qui décrivent une seule chose.
+let monNom = {};
+console.log(monNom);
+
+// Création d'un objet avec des propriétés
+let monChien = {
+  nom: "Max", // Propriété 'nom' avec la valeur "Max"
+  type: "Chien", // Propriété 'type' avec la valeur "Chien"
+  couleur: "Marron", // Propriété 'couleur' avec la valeur "Marron"
+  age: 3, // Propriété 'age' avec la valeur 3 (un nombre)
+  estVaccine: true,
+};
+
+console.log(monChien);
+
+// Si tu utilises des guillemets simples et ta phrase contient une apostrophe
+let phrase1 = "J'ai faim."; // Il faut "échapper" l'apostrophe avec un antislash (\)
+console.log(phrase1); // Affiche : J'ai faim.
+
+// C'est plus simple d'utiliser des guillemets doubles dans ce cas
+let phrase2 = "J'ai faim.";
+console.log(phrase2); // Affiche : J'ai faim.
+
+// Inversement
+let citation = 'Il a dit : "Bonjour".'; // Il faut échapper le guillemet double
+console.log(citation); // Affiche : Il a dit : "Bonjour".
+
+let citation2 = 'Il a dit : "Bonjour".'; // Plus simple
+console.log(citation2); // Affiche : Il a dit : "Bonjour".
